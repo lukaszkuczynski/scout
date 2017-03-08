@@ -10,15 +10,24 @@ You are the manager. You don't have time to search for data in the Internet or a
 ## Terms
 **Scout** has to run when the **mission** is started. It should be as easy as following:
 ```python
-# HeadQuarters
-mission = Mission(options)
-scout = send_scout(mission)
-# Scout house
-mission = receive_mission(mission_no)
-notes = read_notes(mission)
-research_result = do_research(mission, notes)
-send_report_if_needed(research_result)
-update_notes(research_result)
+    notes = self.__read_notes(mission)
+    research_result = self.__do_research(mission, notes)
+    self.__send_report_if_needed(mission, research_result)
+    self.__update_notes(research_result)
+
+```
+Research is about following logic:
+```python
+    current_value = value_reader.read()
+    match = criteria.test(current_value)
+    if match.found:
+        notification = notifier.verify(current_value, notes)
+        if notification.should_notify:
+            return ResearchResult.FOUND(current_value)
+        else:
+            return ResearchResult.FOUND_BUT_KEEP_SILENT(current_value)
+    else:
+        return ResearchResult.NOT_FOUND()
 ```
 Before doing research it may be needed to read **notes**. 
 When the mission is cyclical scout has to remember what he has found recently.
