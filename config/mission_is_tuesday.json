@@ -1,0 +1,20 @@
+{
+    "mission": {
+        "name" : "Tuesday has come",
+        "source": {
+            "webElementSimple": {
+                "address": "https://www.timeanddate.com/worldclock/poland/warsaw",
+                "xpath": "//*[@id=\"ctdat\"]"
+            }
+        },
+        "decision" : {
+            "contains": "Tuesday"
+        },
+        "notify" : {
+            "min_period": "1d"
+        },
+        "report": {
+            "mail": "yourmail@gmail.com"
+        }
+    }
+}

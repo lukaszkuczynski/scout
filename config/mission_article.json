@@ -1,0 +1,27 @@
+{
+    "mission": {
+        "name" : "Article containing Rooney",
+        "source": {
+            "webElementComplex": {
+                "address": "",
+                "xpaths": {
+                    "title": "//title",
+                    "content": "//content",
+                    "link": "//link"
+                }
+            }
+        },
+        "match" : {
+            "element_contains": {
+                "name": "content",
+                "contains": "Rooney"
+            }
+        },
+        "notify": {
+            "unique": "link"
+        },
+        "report": {
+            "mail": "yourmail@gmail.com"
+        }
+    }
+}
