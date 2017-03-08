@@ -1,0 +1,13 @@
+{
+    "mission": {
+        "name" : "is ow part of Wow",
+        "source": {
+            "static_value": "Wow"
+        },
+        "compare" : {
+            "contains": "ow"
+        },
+        "notify": "always",
+        "report": "console"
+    }
+}
