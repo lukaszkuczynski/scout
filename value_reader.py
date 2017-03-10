@@ -1,6 +1,7 @@
 from mission import Mission
 from abc import abstractmethod
 
+
 class ValueReaderFactory():
     def __init__(self, mission):
         self.config = mission['mission']['source']
@@ -10,7 +11,9 @@ class ValueReaderFactory():
         :return: Reader for mission provided
         '''
         # changeit
-        return StaticValueReader(self.config)
+        if 'websimple' in self.config:
+            return WebSimpleReader(self.config)
+
 
 class ValueReader:
     def __init__(self, mission):
