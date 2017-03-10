@@ -1,6 +1,7 @@
 from mission import Mission
 from abc import abstractmethod
-
+from lxml import html
+import requests
 
 class ValueReaderFactory():
     def __init__(self, mission):
@@ -13,15 +14,15 @@ class ValueReaderFactory():
         # changeit
         if 'websimple' in self.config:
             return WebSimpleReader(self.config['websimple'])
-        elif 'static' in self.config:
-            return StaticValueReader(self.config['static'])
+        elif 'static_value' in self.config:
+            return StaticValueReader(self.config['static_value'])
         else:
             raise Exception("undefined reader")
 
 
 class ValueReader:
     def __init__(self, config):
-        self.mission = config
+        self.config = config
 
     @abstractmethod
     def read(self):
@@ -31,10 +32,14 @@ class ValueReader:
 class StaticValueReader(ValueReader):
 
     def read(self):
-        return self.config['static_value']
+        return self.config
 
 
 class WebSimpleReader(ValueReader):
 
     def read(self):
-        pass
+        page = requests.get(self.config['address'])
+        tree = html.fromstring(page.content)
+        value = tree.xpath(self.config['xpath'])
+        return value
+

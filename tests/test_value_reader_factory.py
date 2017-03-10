@@ -19,7 +19,7 @@ class ValueReaderFactoryTest(TestCase):
         config = {
             'mission': {
                 'source': {
-                        'static': {}
+                        'static_value': {}
                 }
             }
         }
