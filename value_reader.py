@@ -12,9 +12,9 @@ class ValueReaderFactory():
         '''
         # changeit
         if 'websimple' in self.config:
-            return WebSimpleReader(self.config)
+            return WebSimpleReader(self.config['websimple'])
         elif 'static' in self.config:
-            return StaticValueReader(self.config)
+            return StaticValueReader(self.config['static'])
         else:
             raise Exception("undefined reader")
 

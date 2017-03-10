@@ -25,3 +25,7 @@ class ValueReaderFactoryTest(TestCase):
         }
         reader = ValueReaderFactory(config).reader()
         self.assertIsInstance(reader, StaticValueReader)
+
+
+if __name__ == '__main__':
+    main()

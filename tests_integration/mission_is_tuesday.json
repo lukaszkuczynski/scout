@@ -2,7 +2,7 @@
     "mission": {
         "name" : "Tuesday has come",
         "source": {
-            "webElementSimple": {
+            "webSimple": {
                 "address": "https://www.timeanddate.com/worldclock/poland/warsaw",
                 "xpath": "//*[@id=\"ctdat\"]"
             }
