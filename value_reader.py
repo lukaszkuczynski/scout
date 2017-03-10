@@ -1,30 +1,33 @@
 from mission import Mission
-
+from abc import abstractmethod
 
 class ValueReaderFactory():
     def __init__(self, mission):
-        self.mission = mission
+        self.config = mission['mission']['source']
 
     def reader(self):
         '''
         :return: Reader for mission provided
         '''
         # changeit
-        return StaticValueReader(self.mission)
+        return StaticValueReader(self.config)
 
 class ValueReader:
     def __init__(self, mission):
         self.mission = mission
 
-    # @abstract
+    @abstractmethod
     def read(self):
-        '''
-        reads value using config
-        :return:
-        '''
+        pass
 
 
 class StaticValueReader(ValueReader):
 
     def read(self):
-        return self.mission['mission']['source']['static_value']
+        return self.config['static_value']
+
+
+class WebSimpleReader(ValueReader):
+
+    def read(self):
+        pass
