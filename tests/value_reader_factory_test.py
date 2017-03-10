@@ -6,10 +6,22 @@ class ValueReaderFactoryTest(TestCase):
     def test_factory_givenWebSimpleInConfig_returnsWebSimpleReader(self):
         config = {
             'mission': {
-                    'source': {
+                'source': {
                     'websimple': {}
                 }
             }
         }
         reader = ValueReaderFactory(config).reader()
         self.assertIsInstance(reader, WebSimpleReader)
+
+
+    def test_factory_givenWebSimpleInConfig_returnsWebSimpleReader(self):
+        config = {
+            'mission': {
+                'source': {
+                        'static': {}
+                }
+            }
+        }
+        reader = ValueReaderFactory(config).reader()
+        self.assertIsInstance(reader, StaticValueReader)

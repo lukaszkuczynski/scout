@@ -13,11 +13,15 @@ class ValueReaderFactory():
         # changeit
         if 'websimple' in self.config:
             return WebSimpleReader(self.config)
+        elif 'static' in self.config:
+            return StaticValueReader(self.config)
+        else:
+            raise Exception("undefined reader")
 
 
 class ValueReader:
-    def __init__(self, mission):
-        self.mission = mission
+    def __init__(self, config):
+        self.mission = config
 
     @abstractmethod
     def read(self):
