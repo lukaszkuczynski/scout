@@ -3,6 +3,7 @@ from abc import abstractmethod
 from lxml import html
 import requests
 
+
 class ValueReaderFactory():
     def __init__(self, mission):
         self.config = mission['mission']['source']
@@ -35,11 +36,4 @@ class StaticValueReader(ValueReader):
         return self.config
 
 
-class WebSimpleReader(ValueReader):
-
-    def read(self):
-        page = requests.get(self.config['address'])
-        tree = html.fromstring(page.content)
-        value = tree.xpath(self.config['xpath'])
-        return value
 

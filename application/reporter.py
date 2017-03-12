@@ -1,6 +1,6 @@
 class ReporterFactory:
     def __init__(self, mission):
-        self.mission
+        self.mission = mission
 
     def reporter(self):
         return ConsoleReporter()

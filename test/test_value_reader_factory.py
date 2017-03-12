@@ -1,5 +1,8 @@
 from unittest import main, TestCase
-from value_reader import ValueReaderFactory, StaticValueReader, WebSimpleReader
+
+from application.value_reader import ValueReaderFactory, StaticValueReader
+from application.web_value_reader import WebSimpleReader
+
 
 class ValueReaderFactoryTest(TestCase):
 

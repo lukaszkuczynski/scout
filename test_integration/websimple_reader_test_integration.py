@@ -1,5 +1,6 @@
 from unittest import main, TestCase
-from value_reader import WebSimpleReader
+
+from application.web_value_reader import WebSimpleReader
 
 
 class WebSimpleReaderTestI(TestCase):

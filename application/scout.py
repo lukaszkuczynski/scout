@@ -49,7 +49,7 @@ class Scout:
         :return: results returned to update notes
         '''
         if research_results.found():
-            ReporterFactory.reporter(mission).report(research_results.current_value)
+            ReporterFactory(mission).reporter().report(research_results.current_value)
 
     def __update_notes(self, research_result):
         '''
