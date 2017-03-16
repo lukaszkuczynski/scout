@@ -1,7 +1,7 @@
 import requests
 from lxml import html
 
-from value_reader import ValueReader
+from application.value_reader import ValueReader
 
 
 class WebSimpleReader(ValueReader):

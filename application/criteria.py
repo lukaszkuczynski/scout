@@ -1,4 +1,4 @@
-from mission import Mission
+from application.mission import Mission
 
 
 class CriteriaFactory:
