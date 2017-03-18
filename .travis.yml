@@ -1,0 +1,14 @@
+sudo: false
+
+language: python
+
+python:
+  - 3.4
+  - 3.5
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - if [[ $TRAVIS_PYTHON_VERSION < 3.5 ]]; then py.test; fi
+  - if [[ $TRAVIS_PYTHON_VERSION > 3.4 ]]; then pytest; fi

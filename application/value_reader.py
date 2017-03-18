@@ -1,4 +1,4 @@
-from mission import Mission
+from application.mission import Mission
 from abc import abstractmethod
 from lxml import html
 import requests
@@ -14,6 +14,7 @@ class ValueReaderFactory():
         '''
         # changeit
         if 'websimple' in self.config:
+            from application.web_value_reader import WebSimpleReader
             return WebSimpleReader(self.config['websimple'])
         elif 'static_value' in self.config:
             return StaticValueReader(self.config['static_value'])
