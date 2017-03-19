@@ -7,7 +7,9 @@ class LibTest(TestCase):
         import lxml
         print(lxml)
         import requests
-        print(requests.__version__)
+        print("requests " + requests.__version__)
+        import pymongo
+        print("pymongo "+ pymongo.get_version_string())
 
 if __name__ == '__main__':
     main()
