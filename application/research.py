@@ -1,16 +1,10 @@
-class ResearchStatus():
+from enum import IntEnum
 
-    @staticmethod
-    def FOUND():
-        return 0;
 
-    @staticmethod
-    def FOUND_BUT_KEEP_SILENT():
-        return 1;
-
-    @staticmethod
-    def NOT_FOUND():
-        return 2;
+class ResearchStatus(IntEnum):
+    FOUND = 0
+    FOUND_BUT_KEEP_SILENT = 1
+    NOT_FOUND = 2
 
 
 class ResearchResult:
@@ -20,16 +14,16 @@ class ResearchResult:
         self.current_value = current_value
 
     def found(self):
-        return self.status == ResearchStatus.FOUND()
+        return self.status == ResearchStatus.FOUND
 
     @staticmethod
     def FOUND(current):
-        return ResearchResult(ResearchStatus.FOUND(), current)
+        return ResearchResult(ResearchStatus.FOUND, current)
 
     @staticmethod
     def FOUND_BUT_KEEP_SILENT(current):
-        return ResearchResult(ResearchStatus.FOUND_BUT_KEEP_SILENT(), current)
+        return ResearchResult(ResearchStatus.FOUND_BUT_KEEP_SILENT, current)
 
     @staticmethod
     def NOT_FOUND():
-        return ResearchResult(ResearchStatus.NOT_FOUND(), None)
+        return ResearchResult(ResearchStatus.NOT_FOUND, None)
