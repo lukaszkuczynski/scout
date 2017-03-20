@@ -1,11 +1,11 @@
 from unittest import main, TestCase
-from application.notes import InMemoryNotes
+from application.notepad import InMemoryNotepad
 
 
 class InMemoryNotesTest(TestCase):
 
     def test_notes_after_add_contains_notes(self):
-        notes = InMemoryNotes()
+        notes = InMemoryNotepad()
 
         mission = {
             'id': 'this_is_id'

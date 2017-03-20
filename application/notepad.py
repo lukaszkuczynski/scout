@@ -3,7 +3,7 @@ from pymongo import MongoClient
 import os
 
 
-class Notes:
+class Notepad:
     def __init__(self):
         self.previous_value = ''
 
@@ -20,7 +20,7 @@ class Notes:
         pass
 
 
-class InMemoryNotes(Notes):
+class InMemoryNotepad(Notepad):
 
     def __init__(self):
         self.notes = {}
@@ -35,7 +35,7 @@ class InMemoryNotes(Notes):
         return self.notes[id]
 
 
-class DefaultNotes(Notes):
+class DefaultNotepad(Notepad):
 
     def __init__(self):
         if not 'SCOUT_MONGO_HOST' in os.environ:
@@ -44,14 +44,21 @@ class DefaultNotes(Notes):
         if not 'SCOUT_MONGO_PORT' in os.environ:
             raise Exception("Scout expects SCOUT_MONGO_PORT set in environment")
         self.port = int(os.environ['SCOUT_MONGO_PORT'])
+        self.client = MongoClient(host=self.host, port=self.port)
+        self.db = self.client['scout']
 
     def check_status(self):
-        client = MongoClient(host=self.host, port=self.port)
         print("checking mongo server")
-        print(client.server_info())
+        print(self.client.server_info())
+        assert "scout" in self.client.database_names()
+        assert "notes" in self.db.collection_names()
 
     def save_for_mission(self, mission, notes):
+        # if mission.has_notifier_with_distinct_value()
+        # if "distinct_field" in mission['mission']['notify']:
         pass
 
     def read_for_mission(self, mission):
-        pass
+        id = mission['mission']['id']
+        value = self.db.notes.find_one({"mission_id": id})
+        return value

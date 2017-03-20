@@ -1,5 +1,5 @@
 from application.mission import Mission
-from application.notes import Notes
+from application.notepad import DefaultNotepad
 from application.value_reader import ValueReaderFactory
 from application.criteria import CriteriaFactory
 from application.research import ResearchResult
@@ -17,7 +17,8 @@ class Scout:
         :param mission: mission in progess
         :return: notes read
         '''
-        return Notes()
+        notes = DefaultNotepad()
+        notes.read_for_mission(mission)
 
     def __do_research(self, mission, notes):
         '''
@@ -51,13 +52,15 @@ class Scout:
         if research_results.found():
             ReporterFactory(mission).reporter().report(research_results.current_value)
 
-    def __update_notes(self, research_result):
+    def __update_notes(self, mission, research_result):
         '''
         Update notes on persistent storage that will be needed for the next attempt
         :param research_result
         :return:
         '''
-        pass
+        notes = DefaultNotepad()
+        # TODO save what?
+        notes.save_for_mission(mission)
 
     def attempt(self, mission_id):
         mission = self.__read_mission(mission_id)
