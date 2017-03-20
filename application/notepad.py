@@ -54,11 +54,31 @@ class DefaultNotepad(Notepad):
         assert "notes" in self.db.collection_names()
 
     def save_for_mission(self, mission, notes):
-        # if mission.has_notifier_with_distinct_value()
-        # if "distinct_field" in mission['mission']['notify']:
-        pass
+        id = mission['mission']['id']
+        value_for_mission = self.db.notes.find_one({"mission_id": id})
+        notes_to_write = []
+        if "distinct_field" in mission['mission']['notify']:
+            field = mission['mission']['notify']['distinct_field']['field']
+            notes_so_far = None
+            if value_for_mission:
+                notes_so_far = value_for_mission[field]
+            if notes_so_far:
+                notes_to_write = notes_so_far
+            notes_to_write.append(notes['url'])
+            self.db.notes.update({'mission_id' : id}, {'$set': {field: notes_to_write}}, upsert=True)
+
+    def reset_notes_at(self, mission, value):
+        id = mission['mission']['id']
+        self.db.notes.update({'mission_id' : id}, {'$set': value}, upsert=True)
+
 
     def read_for_mission(self, mission):
         id = mission['mission']['id']
         value = self.db.notes.find_one({"mission_id": id})
-        return value
+        if not value:
+            return None
+        if "distinct_field" in mission['mission']['notify']:
+            field = mission['mission']['notify']['distinct_field']['field']
+            return value[field]
+        else:
+            return value
