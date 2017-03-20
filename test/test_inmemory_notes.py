@@ -8,7 +8,9 @@ class InMemoryNotesTest(TestCase):
         notes = InMemoryNotepad()
 
         mission = {
-            'id': 'this_is_id'
+            'mission': {
+                'id': 'this_is_id'
+            }
         }
         note = 'This is good note'
 

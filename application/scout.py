@@ -1,5 +1,5 @@
 from application.mission import Mission
-from application.notepad import DefaultNotepad
+from application.notepad import DefaultNotepad, InMemoryNotepad
 from application.value_reader import ValueReaderFactory
 from application.criteria import CriteriaFactory
 from application.research import ResearchResult
@@ -11,14 +11,23 @@ class Scout:
     def __read_mission(self, mission_id):
         return Mission()
 
+    def notepad_for_mission(self, mission):
+        if 'notepad' in mission['mission']:
+            if 'in_memory' in mission['mission']['notepad']:
+                return InMemoryNotepad()
+            else:
+                return DefaultNotepad()
+        else:
+            return DefaultNotepad()
+
     def __read_notes(self, mission):
         '''
         Collects notes from previous mission attempts from datastore
         :param mission: mission in progess
         :return: notes read
         '''
-        notes = DefaultNotepad()
-        notes.read_for_mission(mission)
+        notepad = self.notepad_for_mission(mission)
+        notepad.read_for_mission(mission)
 
     def __do_research(self, mission, notes):
         '''
@@ -58,9 +67,8 @@ class Scout:
         :param research_result
         :return:
         '''
-        notes = DefaultNotepad()
-        # TODO save what?
-        notes.save_for_mission(mission)
+        notepad = self.notepad_for_mission(mission)
+        notepad.save_for_mission(mission, research_result)
 
     def attempt(self, mission_id):
         mission = self.__read_mission(mission_id)
@@ -70,5 +78,5 @@ class Scout:
         notes = self.__read_notes(mission)
         research_result = self.__do_research(mission, notes)
         self.__send_report_if_needed(mission, research_result)
-        self.__update_notes(research_result)
+        self.__update_notes(mission, research_result)
         return research_result

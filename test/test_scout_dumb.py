@@ -1,4 +1,4 @@
-from unittest import TestCase, main
+from unittest import TestCase, main, skip
 from application.scout import Scout
 
 
@@ -6,7 +6,8 @@ class ScoutDumbTest(TestCase):
 
     mission = {
         "mission": {
-            "name" : "is ow part of Wow",
+            "id" : "is_ow_part_of_Wow",
+            "notepad" : "in_memory",
             "source": {
                 "static_value": "Wow"
             },

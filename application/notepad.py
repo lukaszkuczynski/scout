@@ -26,13 +26,17 @@ class InMemoryNotepad(Notepad):
         self.notes = {}
 
     def add_for_mission(self, mission, notes):
-        if not mission['id'] in self.notes:
-            self.notes[mission['id']] = []
-        self.notes[mission['id']].append(notes)
+        id = mission['mission']['id']
+        if not id in self.notes:
+            self.notes[id] = []
+        self.notes[id].append(notes)
 
     def read_for_mission(self, mission):
-        id = mission['id']
-        return self.notes[id]
+        id = mission['mission']['id']
+        if not id in self.notes:
+            return []
+        else:
+            return self.notes[id]
 
 
 class DefaultNotepad(Notepad):
