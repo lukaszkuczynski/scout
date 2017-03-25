@@ -13,12 +13,12 @@ class Manager:
         return True
 
 
-    def __is_started(self,mission):
+    def is_started(self, mission):
         return False
 
 
     def __msg(self, code, msg=''):
-        return tuple(code, msg)
+        return (code, msg)
 
 
     def __set_schedule(self,mission):
@@ -36,7 +36,7 @@ class Manager:
         if not self.__validate(settings):
             return self.__msg(CODE_INVALID_SETTINGS)
         mission = self.__unmarshal(settings)
-        if self.__is_started(mission):
+        if self.is_started(mission):
             return (CODE_MISSION_IN_PROGRESS, mission)
-        self.__set_schedule()
+        self.__set_schedule(mission)
         return self.__msg(CODE_OK)
