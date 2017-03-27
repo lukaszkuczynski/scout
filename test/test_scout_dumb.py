@@ -15,7 +15,7 @@ class ScoutDumbTest(TestCase):
                 "contains": "ow"
             },
             "notify": "always",
-            "report": "console"
+            "reporter": "console"
         }
     }
 
