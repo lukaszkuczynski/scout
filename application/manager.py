@@ -1,3 +1,5 @@
+from application.mission_dao import MissionDao
+
 CODE_OK = 0
 CODE_MISSION_IN_PROGRESS = 1
 CODE_INVALID_SETTINGS = 2
@@ -9,12 +11,16 @@ class Mission:
 
 class Manager:
 
+    def __init__(self):
+        self.dao = MissionDao()
+
     def __validate(self, settings):
         return True
 
 
     def is_started(self, mission):
-        return False
+        found = self.dao.find_mission(mission)
+        return found is not None
 
 
     def __msg(self, code, msg=''):
@@ -22,20 +28,17 @@ class Manager:
 
 
     def __set_schedule(self,mission):
+        self.dao.create_mission(mission)
         '''
         Place to set up cron or other scheduler settings to make automatic mission attempts for Scout
         :param mission:
         :return:
         '''
-        pass
 
-    def __unmarshal(self, settings):
-        return Mission()
 
-    def start_mission(self, settings):
-        if not self.__validate(settings):
+    def start_mission(self, mission):
+        if not self.__validate(mission):
             return self.__msg(CODE_INVALID_SETTINGS)
-        mission = self.__unmarshal(settings)
         if self.is_started(mission):
             return (CODE_MISSION_IN_PROGRESS, mission)
         self.__set_schedule(mission)
