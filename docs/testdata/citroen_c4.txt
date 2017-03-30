@@ -1,0 +1,106 @@
+The Citroën C4 is a compact car (C-segment in Europe) produced by French automaker Citroën since autumn 2004. It is currently in its second generation.
+
+The C4 was designed to be the successor to the Citroën Xsara. It is mechanically similar to the Peugeot 308, which was launched in 2007. A revised version, with a new front end, reverse lights, and dashboard revisions, was launched for the 2008/2009 model year.
+
+In January 2010, it was announced that the coupé version was not to be overhauled, but instead replaced with the Citroën DS4. The C4 scored second place in the 2005 European Car of the Year awards.
+
+Contents  [hide] 
+1	First generation (2004–2010)
+1.1	Debut
+1.2	Design
+1.3	Technology
+1.4	2008 facelift
+1.5	Sedan version
+1.6	Picasso version
+1.7	Advertising
+1.8	Engines
+2	Second generation (2010–present)
+2.1	Debut
+2.2	Design
+2.3	Sedan version
+2.4	C4 Aircross
+2.5	C4 Cactus
+2.6	Engines
+3	C4 in rallying
+4	Awards
+5	Model car releases
+6	Sales and production
+6.1	C4
+6.2	C4 Aircross
+7	See also
+8	References
+9	External links
+First generation (2004–2010)[edit]
+First generation
+Citroen C4 Coupé front.jpg
+Overview
+Also called	Citroën C-Triomphe
+Citroën C-Quatrè
+Citroën C4 Pallas
+Production	2004–2010
+Assembly	Mulhouse, France (PSA Mulhouse Plant)
+Wuhan, China (DPCA)
+El Palomar, Argentina
+Designer	Donato Coco
+Body and chassis
+Body style	3-door coupé
+5-door hatchback
+4-door sedan
+5-door MPV (C4 Picasso)
+Platform	PSA PF2 platform
+Related	Citroën C4 Picasso
+Citroën DS4
+Peugeot 307
+Peugeot 308
+Peugeot 3008
+Peugeot 5008
+Powertrain
+Engine	1.4 L ET3 I4 petrol
+1.6 L TU5 I4 petrol
+2.0 L EW10 I4 petrol
+1.6 L DV6 HDi I4 diesel
+2.0 L DW10 HDi I4 diesel
+Transmission	5-speed manual
+6-speed manual
+4-speed automatic
+6-speed semi-auto
+Dimensions
+Wheelbase	2,608 mm (102.7 in)
+2,710 mm (106.7 in) (sedan)
+Length	4,274 mm (168.3 in) (coupé)
+4,260 mm (167.7 in) (hatchback)
+4,588 mm (180.6 in) (sedan SWB)
+4,770 mm (187.8 in) (sedan)
+Width	1,769 mm (69.6 in)
+Height	1,458 mm (57.4 in)
+1,510 mm (59.4 in) (sedan)
+Curb weight	2,315 lb (1,050 kg)
+Debut[edit]
+To cope with the market, Citroën was dedicated and committed to building a new model that would appeal to many customers. At the Geneva Motor Show in 2004, a concept from the Citroën line's definitive made-bodied coupé revealed the willingness of the French company to employ it in competition. The car was finally unveiled at the Paris show. However, that version was a more domesticated hatchback coupé or five-door.
+
+Design[edit]
+The C4's design was created by a team that included Donato Coco, Jean Pierre Ploué and Bertrand Rapatel.[1] Building on the floor of its cousin, the Peugeot 307, the C4 was immediately made available in two body variants: five-door hatchback and three-door coupé. The front is common to both versions, with the grille formed from virtual extensions of the central crest. The sedan is much more rounded and features softer shapes, so they can boast a Cd of just 0.28, while the coupe is more angular, with a rear split into two parts, including lights.
+
+
+C4 hatch
+The rear window of the coupé is reminiscent of the older Honda CR-X from the early 1990s, as well as the last three-door Mazda 323C. These two versions of the C4 Picasso are more detached, taking over the grille of the sedan and coupe, but the cut of the headlamps are different, aesthetically combining corners and curves. The rear lights incorporate the design as in those of the sedan, but were adapted to the different shape of the body. Internally, the dashboard features a central instrument panel that centralizes all heating and cooling controls, audio, and a satellite navigation screen. The instrument panel contains digital and analog displays of the speedometer, petrol levels, and other gauges. Lighting can be customised to change colour from white to blue.
+
+The revolution, however, is placed in canonical position, behind the wheel. The latter is multifunctional and characterized by having a fixed hub. The cabin is equipped with numerous storage compartments and the luggage compartment is regular in shape, with a capacity of 352 liters, increasing to 1,200 after lowering the rear seat backrest. The load threshold is quite high, hitting the loads of heavy objects. There are laminated side windows and exterior mirrors, with casing specially designed to prevent wind noise and improve comfort inside.
+
+The saloon version is manufactured in Argentina, where it is sold alongside the three-door version. It is exported from there to Brazil and Hungary as the C4 Pallas, to Spain as the C4 Berline, and to Turkey and Greece as the C4 Sedan. A longer four-door saloon version with a different rear end is also built and sold in China as the Citroën C-Triomphe. A panel van based on the coupé bodyshell is available in some markets, including Ireland.
+
+Technology[edit]
+A major selling-point of the C4 was its extensive use of technology. For example, the car features the "lane departure warning system" (only in the top-of-the-range "exclusive" model), which alerts the driver if he or she crosses a road marking without using the turn signals; directional headlights; perfume dispenser integrated into the ventilation system; translucent dashboard; transparent glass roof; electronic stability program (ESP), and a fixed steering wheel hub, which lets the driver operate several functions of the car without removing his or her hands from the wheel.
+
+
+Citroën C4 inside
+The fixed hub also allows for the first production use of a "shaped" driver airbag. Because the hub maintains a constant position, the airbag can be optimally shaped to spread the load across the greatest possible area of the driver's body in a collision, thus reducing the chances of serious injury. In addition, the car features an innovative centrally mounted translucent LCD speedometer display that remains clearly visible in all lighting conditions.
+
+The car's in-car entertainment, integrated into the car's information system via CAN bus, is not Digital audio broadcasting (DAB) ready. MP3 playback is supported by the entry level audio system and high-end audio, with double-layer sound-insulated windows and integrated navigation system available as extras. In September 2007, a USB box accessory[2] (Ref: 9702.EZ) was released to enable full iPod connectivity with the standard RD4 radio.
+
+The C4 does not feature Citroën's Hydractive suspension, which is reserved for higher class models, such as the C5 and C6. The Picasso version can feature a pneumatic rear suspension. The C4 breaks with the past on other fronts, in particular by removing the rear autodirezionale solution, used up to that time on the Xsara and ZX. The suspension is the usual type MacPherson strut front suspension with coil springs, while the rear has interconnected wheels with torsion beam and torsion bars. The braking system includes ventilated discs on the front, and rear solid discs with ABS and ESP (not standard versions with basic fittings). The steering is rack and pinion with electro-hydraulic power steering.
+
+2008 facelift[edit]
+
+2008 Citroën C4 five-door facelift
+At the end of 2008, the C4 hatchback and coupé were subject to a slight cosmetic makeover that involved the front end,[3] which now sported a "mouth" and larger trapezoid shape. The grille was redesigned, making it slightly curved. There were also minor updates in the queue. The redesign led to a slight lengthening of the car body, and was the occasion for more news: from the mechanical point of view was the arrival of the 1.6 Prince, with variable valve timing and aspiration, and turbocharged and direct injection, already mounted on the Peugeot 207 and 308, as well as the Mini. Ride comfort was improved, and the more simplified sedan and the coupe were offered for the same price. In addition, the diesel versions were available with Airdream pack, which allowed for slightly reduced emissions and consumption.
