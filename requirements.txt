@@ -1,3 +1,5 @@
 lxml
 requests
 pymongo
+nltk
+sklearn
