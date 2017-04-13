@@ -2,5 +2,5 @@ lxml
 requests
 pymongo
 nltk
-sklearn
-scipy
+scikit-learn==0.18.1
+scipy==0.18.1
