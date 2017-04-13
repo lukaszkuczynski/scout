@@ -3,3 +3,4 @@ requests
 pymongo
 nltk
 sklearn
+scipy
