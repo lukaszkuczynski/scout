@@ -1,0 +1,5 @@
+FROM resin/rpi-raspbian:jessie-20160831
+MAINTAINER Lukasz Kuczynski <kuczynskilukasz@gmail.com>
+
+#RUN apt-get update
+#RUN apt-get install python3-lxml
