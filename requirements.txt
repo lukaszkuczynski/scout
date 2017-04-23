@@ -4,3 +4,4 @@ pymongo
 nltk
 scikit-learn==0.18.1
 scipy==0.18.1
+Flask
