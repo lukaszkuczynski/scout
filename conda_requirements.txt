@@ -1,6 +1,5 @@
 lxml
 requests
 nltk
-scikit-learn==0.18.1
-scipy==0.18.1
+scikit-learn
 Flask
