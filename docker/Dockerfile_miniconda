@@ -1,0 +1,9 @@
+FROM resin/rpi-raspbian:jessie-20160831
+MAINTAINER Lukasz Kuczynski <kuczynskilukasz@gmail.com>
+
+RUN apt-get update && apt-get install wget bzip2
+RUN wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-armv7l.sh && \
+sudo md5sum Miniconda3-latest-Linux-armv7l.sh
+
+RUN sudo /bin/bash Miniconda3-latest-Linux-armv7l.sh -b
+ENV PATH="/root/miniconda3/bin:$PATH"
