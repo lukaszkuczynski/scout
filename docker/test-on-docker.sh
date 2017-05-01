@@ -1,2 +1,2 @@
-docker run --rm  -it luk/rpi-scout -m unittest discover
+docker run --rm  -it luk/rpi-scout -m unittest discover -v
 

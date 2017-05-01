@@ -16,3 +16,6 @@ EXPOSE 5000
 
 ENTRYPOINT ["python"]
 CMD ["web/web.py"]
+
+RUN python -m nltk.downloader stopwords 
+RUN python -m nltk.downloader punkt
