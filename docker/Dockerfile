@@ -12,6 +12,7 @@ RUN pip install -r pip_requirements.txt
 RUN conda install --yes --file conda_requirements.txt
 
 
-ENTRYPOINT python web/web.py
 EXPOSE 5000
 
+ENTRYPOINT ["python"]
+CMD ["web/web.py"]
