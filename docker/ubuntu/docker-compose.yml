@@ -5,6 +5,6 @@ services:
     ports:
      - "5000:5000"
   mongo:
-    image: "mongo"
+    image: "luk/scout-mongo-ubuntu"
     ports:
      - "27017:27017"

@@ -1,0 +1,6 @@
+FROM mongo
+
+COPY setupdb.js setupdb.js
+RUN mongod --fork --logpath /var/log/mongodb.log && mongo < setupdb.js
+RUN rm /tmp/mongodb-27017.sock
+
